@@ -1,0 +1,81 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    background-color: #000000;
+}
+
+.card {
+    position: relative; /* adicionado para o botão "não" se mover dentro dela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 600px;
+    width: 600px;
+
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+    }
+
+.card > .question p {
+    font-size: 32px;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.btn-yes, .btn-no {
+    height: 48px;
+    width: 100px;
+
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-yes {
+    position: absolute; /* necessário pro movimento */
+    z-index: 2;
+    background-color: #9AFF9A;
+}
+
+.btn-no {
+    position: absolute;
+    z-index: 1;
+    background-color: #FF4040;
+    color: #fff;
+}
+
+.teasing {
+    display: none;
+    margin-top: 12px;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: #FFA500;
+    font-weight: bold;
+}
+
+.answer {
+    display: none;
+}
+
+.answer > p {
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #FF6EB4;
+    text-shadow: 1px 1px #000;
+}
